@@ -4,7 +4,7 @@ import { IoCartOutline } from "react-icons/io5";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-[url('/banner.png')] bg-cover bg-center flex items-center justify-center">
+    <section className="min-h-screen bg-[url('/banner.png')] bg-cover flex items-center justify-center">
       <div className="w-full max-w-7xl px-6">
         {/* logo */}
         <div className="max-w-2xl">
