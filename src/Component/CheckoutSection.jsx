@@ -6,8 +6,8 @@ const CheckoutSection = () => {
   return (
     <section className="w-full py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-center text-2xl md:text-3xl font-bold mb-16">
-          <span className="bg-linear-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+        <h2 className="text-center text-2xl md:text-4xl font-bold mb-16">
+          <span className="gradient-text">
             তাই আর দেরি না করে আজই অর্ডার করুন
           </span>
         </h2>

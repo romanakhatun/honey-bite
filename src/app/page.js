@@ -1,5 +1,6 @@
 import BenefitsSection from "@/Component/BenefitsSection";
 import CheckoutSection from "@/Component/CheckoutSection";
+import CTASection from "@/Component/CTASection";
 import CustomerReview from "@/Component/CustomerReview";
 import FloatingCTA from "@/Component/FloatingCTA";
 import Footer from "@/Component/Footer";
@@ -19,6 +20,7 @@ export default function Home() {
         <FloatingCTA />
         <BenefitsSection />
         <HoneyFeature />
+        <CTASection />
         <WhyChooseUs />
         <CheckoutSection />
         <CustomerReview />

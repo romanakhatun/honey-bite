@@ -6,7 +6,7 @@ const FloatingCTA = () => {
     <>
       <section className="relative w-full py-20">
         {/* Left image */}
-        <div className="floating-left">
+        <div className="floating-left w-80">
           <Image
             src="/honey_left.svg"
             alt="Honey Left"

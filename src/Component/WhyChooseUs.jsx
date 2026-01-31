@@ -3,7 +3,7 @@ import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <section className="relative w-full py-28 overflow-hidden bg-[url('/why-buy.png')] bg-contain bg-center">
+    <section className="relative w-full py-28 bg-[url('/why-buy.png')] bg-cover xl:bg-contain bg-no-repeat xl:bg-repeat">
       {/* left honey spoon */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2">
         <Image
@@ -27,25 +27,15 @@ const WhyChooseUs = () => {
         </h2>
 
         <ul className="space-y-5 text-lg md:text-xl text-gray-700">
-          <li className="flex items-center justify-center gap-3">
-            ফ্রি হোম ডেলিভারি সুবিধা।
-          </li>
+          <li>ফ্রি হোম ডেলিভারি সুবিধা।</li>
 
-          <li className="flex items-center justify-center gap-3">
-            ১০০% অরিজিনাল মধু ক্যাশব্যাক গ্যারান্টি
-          </li>
+          <li>১০০% অরিজিনাল মধু ক্যাশব্যাক গ্যারান্টি</li>
 
-          <li className="flex items-center justify-center gap-3">
-            প্রোডাক্ট হাতে পেয়ে কোয়ালিটি যাচাই করে পেমেন্ট করার সুবিধা
-          </li>
+          <li>প্রোডাক্ট হাতে পেয়ে কোয়ালিটি যাচাই করে পেমেন্ট করার সুবিধা</li>
 
-          <li className="flex items-center justify-center gap-3">
-            আমরা সুনাম ও বিশ্বাসের সাথে ব্যবসা করি
-          </li>
+          <li>আমরা সুনাম ও বিশ্বাসের সাথে ব্যবসা করি</li>
 
-          <li className="flex items-center justify-center gap-3">
-            ফ্রি হেলথ টিপস
-          </li>
+          <li>ফ্রি হেলথ টিপস</li>
         </ul>
       </div>
     </section>
