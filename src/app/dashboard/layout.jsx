@@ -1,11 +1,15 @@
 import React from "react";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
+import Header from "@/Component/Dashboard/Header";
 
 const DashboardLayout = ({ children }) => {
   return (
     <html lang="en">
       <body>
-        <AntdRegistry>{children}</AntdRegistry>
+        <AntdRegistry>
+          <Header />
+          {children}
+        </AntdRegistry>
       </body>
     </html>
   );

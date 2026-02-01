@@ -11,8 +11,7 @@ const Hotline = () => {
             bg-[url('/hotline.png')]
             bg-cover bg-no-repeat
             flex flex-col items-center justify-center
-            text-center
-          "
+            text-center"
         >
           <p className="text-red-600 text-[22px] md:text-3xl font-semibold mb-2">
             যে কোন প্রয়োজনে কল করুন
