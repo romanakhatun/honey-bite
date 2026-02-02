@@ -24,8 +24,8 @@ export default function Home() {
         <WhyChooseUs />
         <CheckoutSection />
         <CustomerReview />
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }
