@@ -27,7 +27,7 @@ const notifications = [
   },
 ];
 
-const NotificationsDropdown = () => {
+const Notifications = () => {
   return (
     <div
       style={{
@@ -100,4 +100,4 @@ const NotificationsDropdown = () => {
     </div>
   );
 };
-export default NotificationsDropdown;
+export default Notifications;

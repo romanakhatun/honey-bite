@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { Layout, Button, Avatar, Badge, Space, Dropdown } from "antd";
 import {
@@ -12,9 +11,9 @@ import { GoScreenFull } from "react-icons/go";
 import { CgMenuLeft } from "react-icons/cg";
 import { BsMoon } from "react-icons/bs";
 import Image from "next/image";
-import NotificationsDropdown from "./NotificationsDropdown";
-import ProfileDropdown from "./ProfileDropdown";
-import TimesheetDropdown from "./TimesheetDropdown";
+import Notifications from "./Dropdown/Notifications";
+import Profile from "./Dropdown/Profile";
+import Timesheet from "./Dropdown/Timesheet";
 import Languages from "./Dropdown/Languages";
 
 const { Header: AntHeader } = Layout;
@@ -42,7 +41,7 @@ const Header = () => {
         <Dropdown
           trigger={["hover"]}
           placement="bottomRight"
-          dropdownRender={() => <Languages />}
+          popupRender={() => <Languages />}
         >
           <Image
             src="/assets/flags/us.svg"
@@ -59,7 +58,7 @@ const Header = () => {
         <Dropdown
           trigger={["hover"]}
           placement="bottomRight"
-          dropdownRender={() => <TimesheetDropdown />}
+          popupRender={() => <Timesheet />}
         >
           <Badge
             styles={{ indicator: { backgroundColor: "#17c666" } }}
@@ -69,25 +68,20 @@ const Header = () => {
           </Badge>
         </Dropdown>
 
-        {/* <Badge count={3}>
-          <AiOutlineBell size={20} style={{ cursor: "pointer" }} />
-        </Badge> */}
-
         <Dropdown
           trigger={["hover"]}
           placement="bottomRight"
-          dropdownRender={() => <NotificationsDropdown />}
+          popupRender={() => <Notifications />}
         >
           <Badge count={3}>
             <AiOutlineBell size={20} style={{ cursor: "pointer" }} />
           </Badge>
         </Dropdown>
 
-        {/* <Avatar src="/assets/avatar.png" /> */}
         <Dropdown
           trigger={["hover"]}
           placement="bottomRight"
-          dropdownRender={() => <ProfileDropdown />}
+          popupRender={() => <Profile />}
         >
           <Avatar src="/assets/avatar.png" style={{ cursor: "pointer" }} />
         </Dropdown>

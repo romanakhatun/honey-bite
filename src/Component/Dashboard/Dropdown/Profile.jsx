@@ -30,7 +30,7 @@ const Item = ({ icon, label, showArrow = false }) => (
   </div>
 );
 
-const ProfileDropdown = () => {
+const Profile = () => {
   return (
     <div
       style={{
@@ -97,4 +97,4 @@ const ProfileDropdown = () => {
     </div>
   );
 };
-export default ProfileDropdown;
+export default Profile;

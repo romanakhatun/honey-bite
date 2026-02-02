@@ -1,7 +1,7 @@
 import { Button, Space, Card, Typography } from "antd";
 import { AiOutlineClockCircle } from "react-icons/ai";
 
-const TimesheetDropdown = () => {
+const Timesheet = () => {
   const { Text, Title } = Typography;
 
   return (
@@ -68,4 +68,4 @@ const TimesheetDropdown = () => {
     </Card>
   );
 };
-export default TimesheetDropdown;
+export default Timesheet;
