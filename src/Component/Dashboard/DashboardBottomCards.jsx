@@ -4,10 +4,7 @@ import React from "react";
 import { Card, Row, Col, Progress, Avatar, Space } from "antd";
 import { MoreOutlined } from "@ant-design/icons";
 
-/* =========================
-   DATA
-========================= */
-
+/* Data */
 const schedules = [
   { day: 20, color: "#16a34a", title: "React Meeting", time: "11:30am" },
   { day: 30, color: "#f59e0b", title: "Admin Design", time: "10:00am" },
@@ -30,14 +27,9 @@ const team = [
   { name: "Kenneth Hune", role: "Marketing", percent: 75, color: "#16a34a" },
 ];
 
-/* =========================
-   COMPONENT
-========================= */
-
 const DashboardBottomCards = () => {
   return (
     <Row gutter={[24, 24]}>
-      {/* ================= UPCOMING ================= */}
       <Col xs={24} lg={8}>
         <Card
           title="Upcoming Schedule"
@@ -95,8 +87,6 @@ const DashboardBottomCards = () => {
           </div>
         </Card>
       </Col>
-
-      {/* ================= PROJECT STATUS ================= */}
       <Col xs={24} lg={8}>
         <Card
           title="Project Status"

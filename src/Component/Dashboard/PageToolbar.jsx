@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import {
   Breadcrumb,
@@ -68,11 +67,10 @@ const PageToolbar = () => {
     segments[segments.length - 1]?.charAt(0).toUpperCase() +
       segments[segments.length - 1]?.slice(1) || "Dashboard";
 
-  /* ================= MOBILE ================= */
   if (!screens.md) {
     return (
       <>
-        {/* top bar */}
+        {/* Top Bar */}
         <div
           style={{
             background: "#fff",
@@ -91,12 +89,12 @@ const PageToolbar = () => {
           />
         </div>
 
-        {/* RIGHT drawer */}
+        {/* Drawer */}
         <Drawer
-          placement="right" // ✅ slide from right
+          placement="right"
           open={open}
           onClose={() => setOpen(false)}
-          size="100%" // full overlay
+          size="100%"
           closable={false}
           styles={{ body: { padding: 18 } }}
         >
@@ -128,12 +126,12 @@ const PageToolbar = () => {
     );
   }
 
-  /* ================= DESKTOP ================= */
+  /* DESKTOP */
   return (
     <div
       style={{
         background: "#fff",
-        padding: "14px 24px",
+        padding: "25px 24px",
         borderBottom: "1px solid #eee",
         display: "flex",
         justifyContent: "space-between",

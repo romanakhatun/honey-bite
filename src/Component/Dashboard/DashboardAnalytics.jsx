@@ -10,10 +10,9 @@ import {
   XAxis,
   Tooltip,
 } from "recharts";
+import Image from "next/image";
 
-/* =========================
-   CHART DATA
-========================= */
+/* Chart Data */
 
 const data = [
   { month: "JAN/23", value: 22, bg: 45 },
@@ -30,9 +29,7 @@ const data = [
   { month: "DEC/23", value: 20, bg: 58 },
 ];
 
-/* =========================
-   PRODUCT DATA
-========================= */
+/* Product Data */
 
 const products = [
   {
@@ -47,7 +44,7 @@ const products = [
     cat: "Electronics",
     price: "$1450",
     sold: "3 sold",
-    icon: "/assets/ios.png",
+    icon: "/assets/app-store.png",
   },
   {
     name: "Figma Dashboard Design",
@@ -58,14 +55,10 @@ const products = [
   },
 ];
 
-/* =========================
-   COMPONENT
-========================= */
-
 const DashboardAnalytics = () => {
   return (
     <Row gutter={[24, 24]}>
-      {/* ================= LEFT : PAYMENT RECORD ================= */}
+      {/*  Record */}
       <Col xs={24} lg={16}>
         <Card
           title="Payment Record"
@@ -80,7 +73,6 @@ const DashboardAnalytics = () => {
               <XAxis dataKey="month" />
               <Tooltip />
 
-              {/* grey background bars */}
               <Bar
                 dataKey="bg"
                 fill="#e5e7eb"
@@ -189,15 +181,15 @@ const DashboardAnalytics = () => {
                     gap: 14,
                   }}
                 >
-                  {/* <img
+                  <Image
                     src={item.icon}
-                    alt=""
+                    alt="icon"
                     style={{
-                      width: 48,
-                      height: 48,
                       borderRadius: 10,
                     }}
-                  /> */}
+                    width={48}
+                    height={48}
+                  />
 
                   <div>
                     <div style={{ fontWeight: 600 }}>{item.name}</div>

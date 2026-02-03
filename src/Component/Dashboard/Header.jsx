@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Layout, Button, Avatar, Badge, Space, Dropdown, Menu } from "antd";
+import { Layout, Button, Avatar, Badge, Space, Dropdown, Grid } from "antd";
 import {
   AiOutlineClockCircle,
   AiOutlineBell,
@@ -19,17 +19,10 @@ import Timesheet from "./Dropdown/Timesheet";
 import Languages from "./Dropdown/Languages";
 
 const { Header: AntHeader } = Layout;
+const { useBreakpoint } = Grid;
 
-const Header = ({ collapsed, setCollapsed, onToggleSidebar }) => {
-  const plusMenu = (
-    <Menu
-      items={[
-        { key: 1, label: "Create Project" },
-        { key: 2, label: "Create Task" },
-        { key: 3, label: "Add Member" },
-      ]}
-    />
-  );
+const Header = ({ onToggleSidebar }) => {
+  const screens = useBreakpoint();
 
   return (
     <AntHeader
@@ -49,11 +42,10 @@ const Header = ({ collapsed, setCollapsed, onToggleSidebar }) => {
           onClick={onToggleSidebar}
         />
 
-        <Dropdown overlay={plusMenu} trigger={["click"]}>
+        {screens.md && (
           <Button type="primary" shape="circle" icon={<AiOutlinePlus />} />
-        </Dropdown>
-
-        <Button style={{ fontWeight: 600 }}>MEGA MENU</Button>
+        )}
+        {screens.md && <Button style={{ fontWeight: 600 }}>MEGA MENU</Button>}
       </Space>
 
       <Space size={20}>
@@ -63,18 +55,21 @@ const Header = ({ collapsed, setCollapsed, onToggleSidebar }) => {
           <Image src="/assets/flags/us.svg" alt="" width={22} height={16} />
         </Dropdown>
 
-        <GoScreenFull />
-        <BsMoon />
+        <GoScreenFull size={20} />
+        <BsMoon size={20} />
 
         <Dropdown trigger={["hover"]} popupRender={() => <Timesheet />}>
-          <Badge count={2}>
-            <AiOutlineClockCircle />
+          <Badge
+            count={2}
+            style={{ backgroundColor: "#17c666", verticalAlign: "middle" }}
+          >
+            <AiOutlineClockCircle size={20} style={{ cursor: "pointer" }} />
           </Badge>
         </Dropdown>
 
         <Dropdown trigger={["hover"]} popupRender={() => <Notifications />}>
-          <Badge count={3}>
-            <AiOutlineBell />
+          <Badge count={3} style={{ verticalAlign: "middle" }}>
+            <AiOutlineBell size={20} style={{ cursor: "pointer" }} />
           </Badge>
         </Dropdown>
 

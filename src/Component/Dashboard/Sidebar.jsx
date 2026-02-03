@@ -1,17 +1,20 @@
 "use client";
-
 import React, { useState } from "react";
 import { Layout, Menu, Drawer, Grid } from "antd";
 import {
   DashboardOutlined,
-  FileTextOutlined,
+  BarChartOutlined,
+  AppstoreOutlined,
+  FileDoneOutlined,
+  DollarOutlined,
+  UsergroupAddOutlined,
+  SolutionOutlined,
+  ProjectOutlined,
   SettingOutlined,
 } from "@ant-design/icons";
 import { useRouter } from "next/navigation";
-
 const { Sider } = Layout;
 const { useBreakpoint } = Grid;
-
 const items = [
   {
     key: "dashboards",
@@ -24,11 +27,55 @@ const items = [
   },
   {
     key: "reports",
-    icon: <FileTextOutlined />,
+    icon: <BarChartOutlined />,
     label: "Reports",
     children: [
-      { key: "/dashboard/sales", label: "Sales" },
-      { key: "/dashboard/finance", label: "Finance" },
+      { key: "/reports/sales", label: "Sales Report" },
+      { key: "/reports/leads", label: "Leads Report" },
+      { key: "/reports/projects", label: "Project Report" },
+      { key: "/reports/timesheets", label: "Timesheets Report" },
+    ],
+  },
+  {
+    key: "application",
+    icon: <AppstoreOutlined />,
+    label: "Application",
+    children: [
+      { key: "/application/chat", label: "Chat" },
+      { key: "/application/email", label: "Email" },
+      { key: "/application/tasks", label: "Tasks" },
+      { key: "/application/notes", label: "Notes" },
+      { key: "/application/storages", label: "Storage" },
+      { key: "/application/calender", label: "Calendar" },
+    ],
+  },
+  {
+    key: "proposal",
+    icon: <FileDoneOutlined />,
+    label: "Proposal",
+    children: [
+      { key: "/proposal", label: "Proposal" },
+      { key: "/proposal/view", label: "Proposal View" },
+      { key: "/proposal/edit", label: "Proposal Edit" },
+      { key: "/proposal/create", label: "Proposal Create" },
+    ],
+  },
+  {
+    key: "payment",
+    icon: <DollarOutlined />,
+    label: "Payment",
+    children: [{ key: "/payment/payment", label: "Payment" }],
+  },
+  { key: "customers", icon: <UsergroupAddOutlined />, label: "Customers" },
+  { key: "leads", icon: <SolutionOutlined />, label: "Leads" },
+  {
+    key: "projects",
+    icon: <ProjectOutlined />,
+    label: "Projects",
+    children: [
+      { key: "/dashboard/projects", label: "Projects" },
+      { key: "/dashboard/projects/view", label: "Projects View" },
+      { key: "/dashboard/projects/create", label: "Projects Create" },
     ],
   },
   {
@@ -41,14 +88,11 @@ const items = [
     ],
   },
 ];
-
-const Sidebar = ({ collapsed, setCollapsed, mobileOpen, setMobileOpen }) => {
+const Sidebar = ({ collapsed, mobileOpen, setMobileOpen }) => {
   const screens = useBreakpoint();
   const router = useRouter();
-
   const [hoverOpen, setHoverOpen] = useState(false);
   const isCollapsed = collapsed && !hoverOpen;
-
   if (!screens.lg) {
     return (
       <Drawer
@@ -67,13 +111,13 @@ const Sidebar = ({ collapsed, setCollapsed, mobileOpen, setMobileOpen }) => {
               setMobileOpen(false);
             }
           }}
-        />
+        />{" "}
       </Drawer>
     );
   }
   return (
     <Sider
-      width={340}
+      width={240}
       collapsedWidth={80}
       collapsed={isCollapsed}
       trigger={null}
@@ -84,11 +128,12 @@ const Sidebar = ({ collapsed, setCollapsed, mobileOpen, setMobileOpen }) => {
         zIndex: 1000,
         minHeight: "100vh",
         display: "flex",
-        flexDirection: "column",
+        flexorientation: "column",
       }}
       onMouseEnter={() => collapsed && setHoverOpen(true)}
       onMouseLeave={() => collapsed && setHoverOpen(false)}
     >
+      {" "}
       <div
         style={{
           height: 64,
@@ -96,11 +141,12 @@ const Sidebar = ({ collapsed, setCollapsed, mobileOpen, setMobileOpen }) => {
           alignItems: "center",
           justifyContent: "center",
           fontWeight: 700,
+          fontSize: 30,
         }}
       >
-        {isCollapsed ? "D" : "DURALUX"}
-      </div>
-
+        {" "}
+        {isCollapsed ? "D" : "DURALUX"}{" "}
+      </div>{" "}
       <Menu
         mode="inline"
         items={items}
@@ -110,46 +156,9 @@ const Sidebar = ({ collapsed, setCollapsed, mobileOpen, setMobileOpen }) => {
             router.push(key);
           }
         }}
-      />
-
-      {/* {!isCollapsed && (
-        <div
-          style={{
-            padding: 16,
-          }}
-        >
-          <div
-            style={{
-              background: "#f6f7fb",
-              borderRadius: 14,
-              padding: 20,
-              textAlign: "center",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.06)",
-            }}
-          >
-            <DownloadOutlined style={{ fontSize: 28, marginBottom: 10 }} />
-
-            <h3 style={{ marginBottom: 8 }}>Downloading Center</h3>
-
-            <p
-              style={{
-                fontSize: 13,
-                color: "#666",
-                marginBottom: 16,
-              }}
-            >
-              Duralux is a production ready CRM to get started up and running
-              easily.
-            </p>
-
-            <Button type="primary" block size="large">
-              DOWNLOAD NOW
-            </Button>
-          </div>
-        </div>
-      )} */}
+      />{" "}
+      {/* {!isCollapsed && ( <div style={{ padding: 16, }} > <div style={{ background: "#f6f7fb", borderRadius: 14, padding: 20, textAlign: "center", boxShadow: "0 4px 12px rgba(0,0,0,0.06)", }} > <DownloadOutlined style={{ fontSize: 28, marginBottom: 10 }} /> <h3 style={{ marginBottom: 8 }}>Downloading Center</h3> <p style={{ fontSize: 13, color: "#666", marginBottom: 16, }} > Duralux is a production ready CRM to get started up and running easily. </p> <Button type="primary" block size="large"> DOWNLOAD NOW </Button> </div> </div> )} */}{" "}
     </Sider>
   );
 };
-
 export default Sidebar;

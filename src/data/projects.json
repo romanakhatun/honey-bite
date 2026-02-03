@@ -1,0 +1,159 @@
+[
+  {
+    "id": 1,
+    "logo": "/assets/projects/app-store.png",
+    "name": "Spark",
+    "description": "This name could work well for a project...",
+    "customer": { "name": "Alexandra Della", "avatar": "/assets/avatar.png" },
+    "startDate": "2023-04-05",
+    "endDate": "2023-04-10",
+    "assigned": {
+      "name": "archie.tones@gmail.com",
+      "avatar": "/assets/avatar.png"
+    },
+    "status": "In Progress"
+  },
+  {
+    "id": 2,
+    "logo": "/assets/projects/dropbox.png",
+    "name": "Nexus",
+    "description": "Cloud sync project",
+    "customer": { "name": "Green Cute", "avatar": "/assets/avatar.png" },
+    "startDate": "2023-04-05",
+    "endDate": "2023-04-10",
+    "assigned": {
+      "name": "jon.tones@gmail.com",
+      "avatar": "/assets/avatar.png"
+    },
+    "status": "Not Started"
+  },
+  {
+    "id": 3,
+    "logo": "/assets/projects/facebook.png",
+    "name": "Velocity",
+    "description": "Marketing project",
+    "customer": { "name": "Nancy Elliot", "avatar": "/assets/avatar.png" },
+    "startDate": "2023-04-05",
+    "endDate": "2023-04-10",
+    "assigned": { "name": "nancy@mail.com", "avatar": "/assets/avatar.png" },
+    "status": "On Hold"
+  },
+  {
+    "id": 4,
+    "logo": "/assets/projects/figma.png",
+    "name": "Catalyst",
+    "description": "UI Kit project",
+    "customer": { "name": "Henry Leach", "avatar": "/assets/avatar.png" },
+    "startDate": "2023-04-05",
+    "endDate": "2023-04-10",
+    "assigned": { "name": "henry@mail.com", "avatar": "/assets/avatar.png" },
+    "status": "Declined"
+  },
+  {
+    "id": 5,
+    "logo": "/assets/projects/github.png",
+    "name": "Odyssey",
+    "description": "Open source tools",
+    "customer": { "name": "Marianne Audrey", "avatar": "/assets/avatar.png" },
+    "startDate": "2023-04-05",
+    "endDate": "2023-04-10",
+    "assigned": { "name": "git@mail.com", "avatar": "/assets/avatar.png" },
+    "status": "Finished"
+  },
+  {
+    "id": 6,
+    "logo": "/assets/projects/paypal.png",
+    "name": "Horizon",
+    "description": "Payment gateway",
+    "customer": { "name": "Elliot Nancy", "avatar": "/assets/avatar.png" },
+    "startDate": "2023-04-05",
+    "endDate": "2023-04-10",
+    "assigned": { "name": "pay@mail.com", "avatar": "/assets/avatar.png" },
+    "status": "Active"
+  },
+  {
+    "id": 7,
+    "logo": "/assets/projects/gmail.png",
+    "name": "Velocity",
+    "description": "This name could work well for a project...",
+    "customer": {
+      "name": "Nancy Elliot",
+      "avatar": "/assets/avatar.png"
+    },
+    "startDate": "2023-04-05",
+    "endDate": "2023-04-10",
+    "assigned": {
+      "name": "lanie.nyeng@gmail.com",
+      "avatar": "/assets/avatar.png"
+    },
+    "status": "Finished"
+  },
+  {
+    "id": 8,
+    "logo": "/assets/projects/paypal.png",
+    "name": "Velocity",
+    "description": "This name could work well for a project...",
+    "customer": {
+      "name": "Nancy Elliot",
+      "avatar": "/assets/avatar.png"
+    },
+    "startDate": "2023-04-05",
+    "endDate": "2023-04-10",
+    "assigned": {
+      "name": "lanie.nyeng@gmail.com",
+      "avatar": "/assets/avatar.png"
+    },
+    "status": "Finished"
+  },
+  {
+    "id": 9,
+    "logo": "/assets/projects/paypal.png",
+    "name": "Velocity",
+    "description": "This name could work well for a project...",
+    "customer": {
+      "name": "Nancy Elliot",
+      "avatar": "/assets/avatar.png"
+    },
+    "startDate": "2023-04-05",
+    "endDate": "2023-04-10",
+    "assigned": {
+      "name": "lanie.nyeng@gmail.com",
+      "avatar": "/assets/avatar.png"
+    },
+    "status": "Finished"
+  },
+  {
+    "id": 10,
+    "logo": "/assets/projects/paypal.png",
+    "name": "Velocity",
+    "description": "This name could work well for a project...",
+    "customer": {
+      "name": "Nancy Elliot",
+      "avatar": "/assets/avatar.png"
+    },
+    "startDate": "2023-04-05",
+    "endDate": "2023-04-10",
+    "assigned": {
+      "name": "lanie.nyeng@gmail.com",
+      "avatar": "/assets/avatar.png"
+    },
+    "status": "Finished"
+  },
+  {
+    "id": 11,
+    "logo": "/assets/projects/paypal.png",
+    "name": "Velocity",
+    "description": "This name could work well for a project...",
+    "customer": {
+      "name": "Nancy Elliot",
+      "avatar": "/assets/avatar.png"
+    },
+    "startDate": "2023-04-05",
+    "endDate": "2023-04-10",
+    "assigned": {
+      "name": "lanie.nyeng@gmail.com",
+      "avatar": "/assets/avatar.png"
+    },
+    "status": "Finished"
+  }
+]

@@ -9,10 +9,11 @@ import HoneyFeature from "@/Component/HoneyFeature";
 import Hotline from "@/Component/Hotline";
 import JarSection from "@/Component/JarSection";
 import WhyChooseUs from "@/Component/WhyChooseUs";
+import { AntdRegistry } from "@ant-design/nextjs-registry";
 
 export default function Home() {
   return (
-    <>
+    <AntdRegistry>
       <main>
         <Hero />
         <Hotline />
@@ -26,6 +27,6 @@ export default function Home() {
         <CustomerReview />
       </main>
       <Footer />
-    </>
+    </AntdRegistry>
   );
 }
