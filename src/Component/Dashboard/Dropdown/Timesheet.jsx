@@ -12,7 +12,7 @@ const Timesheet = () => {
         boxShadow: "0 20px 60px rgba(0,0,0,0.15)",
         padding: 0,
       }}
-      bodyStyle={{ padding: 0 }}
+      styles={{ body: { padding: 22 } }}
     >
       <div
         style={{

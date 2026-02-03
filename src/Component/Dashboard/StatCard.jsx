@@ -16,7 +16,7 @@ const StatCard = ({
 }) => {
   return (
     <Card
-      bodyStyle={{ padding: 22 }}
+      styles={{ body: { padding: 22 } }}
       style={{
         borderRadius: 16,
         boxShadow: "0 6px 18px rgba(0,0,0,0.06)",

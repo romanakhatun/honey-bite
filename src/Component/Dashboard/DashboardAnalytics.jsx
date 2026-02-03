@@ -148,18 +148,15 @@ const DashboardAnalytics = () => {
           </Row>
         </Card>
       </Col>
-
-      {/* ================= RIGHT : SALES PANEL ================= */}
       <Col xs={24} lg={8}>
         <Card
-          bodyStyle={{ padding: 0 }}
+          styles={{ body: { padding: 0 } }}
           style={{
             borderRadius: 16,
             overflow: "hidden",
             boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
           }}
         >
-          {/* Blue header */}
           <div
             style={{
               background: "#3456db",
@@ -171,7 +168,6 @@ const DashboardAnalytics = () => {
             <div>Total Sales</div>
           </div>
 
-          {/* PRODUCTS (NO List component — SAFE) */}
           <div>
             {products.map((item, i) => (
               <div
@@ -225,7 +221,6 @@ const DashboardAnalytics = () => {
             ))}
           </div>
 
-          {/* footer */}
           <div
             style={{
               textAlign: "center",

@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { Card, Row, Col } from "antd";
 import {
@@ -8,10 +7,6 @@ import {
   ProjectOutlined,
 } from "@ant-design/icons";
 import { ResponsiveContainer, AreaChart, Area } from "recharts";
-
-/* ---------------------------
-   Mini chart component
---------------------------- */
 
 const MiniChart = ({ color }) => {
   const data = [
@@ -46,14 +41,10 @@ const MiniChart = ({ color }) => {
   );
 };
 
-/* ---------------------------
-   Single Card
---------------------------- */
-
 const MiniStatCard = ({ icon, title, subtitle, value, color, percent }) => {
   return (
     <Card
-      bodyStyle={{ padding: 20 }}
+      styles={{ body: { padding: 20 } }}
       style={{
         borderRadius: 16,
         boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
@@ -122,10 +113,6 @@ const MiniStatCard = ({ icon, title, subtitle, value, color, percent }) => {
     </Card>
   );
 };
-
-/* ---------------------------
-   MAIN COMPONENT
---------------------------- */
 
 const DashboardMiniStats = () => {
   return (
