@@ -59,7 +59,6 @@ const ProjectOverview = () => {
     label: p,
     onClick: () => setSelectedProject(p),
   }));
-
   return (
     <Space orientation="vertical" size={20} style={{ width: "100%" }}>
       <Card style={{ borderRadius: 16 }}>
@@ -67,31 +66,35 @@ const ProjectOverview = () => {
           style={{
             width: "100%",
             justifyContent: "space-between",
+            flexWrap: "wrap",
+            gap: 12,
           }}
         >
-          {/* LEFT */}
           <Space orientation="vertical" size={8}>
             <Title level={4} style={{ margin: 0 }}>
               Duralux | CRM Applications & Admin Dashboard
             </Title>
 
-            <Space>
+            <Space wrap>
               <Dropdown menu={{ items }} trigger={["click"]}>
                 <Button>{selectedProject}</Button>
               </Dropdown>
+
               <Avatar.Group>
                 {[1, 2, 3, 4].map((i) => (
                   <Avatar key={i} src="/assets/avatar.png" />
                 ))}
               </Avatar.Group>
+
               <Text type="secondary">24+ members</Text>
             </Space>
           </Space>
 
-          <Space>
+          <Space wrap>
             <Button icon={<CheckOutlined />} />
             <Button icon={<CalendarOutlined />} />
             <Button icon={<BarChartOutlined />} />
+
             <Button
               type="primary"
               icon={<ClockCircleOutlined />}
@@ -107,14 +110,15 @@ const ProjectOverview = () => {
         </Space>
       </Card>
 
-      <Row gutter={20}>
-        <Col xs={24} lg={14}>
+      <Row gutter={[20, 20]}>
+        <Col xs={24} xl={14}>
           <ProjectOverviewSimple />
         </Col>
-        <Col xs={24} lg={10}>
+
+        <Col xs={24} xl={10}>
           <Space orientation="vertical" style={{ width: "100%" }} size={16}>
             <Row gutter={[16, 16]}>
-              <Col span={12}>
+              <Col xs={24} sm={12}>
                 <StatCard
                   title="Logged Hours"
                   value="00:00"
@@ -122,7 +126,8 @@ const ProjectOverview = () => {
                   icon={<ArrowRightOutlined />}
                 />
               </Col>
-              <Col span={12}>
+
+              <Col xs={24} sm={12}>
                 <StatCard
                   title="Billable Hours"
                   value="00:00"
@@ -130,7 +135,8 @@ const ProjectOverview = () => {
                   icon={<FileTextOutlined />}
                 />
               </Col>
-              <Col span={12}>
+
+              <Col xs={24} sm={12}>
                 <StatCard
                   title="Approved Tasks"
                   value="16"
@@ -138,7 +144,8 @@ const ProjectOverview = () => {
                   icon={<CheckOutlined />}
                 />
               </Col>
-              <Col span={12}>
+
+              <Col xs={24} sm={12}>
                 <StatCard
                   title="Rejected Tasks"
                   value="2"
@@ -148,20 +155,17 @@ const ProjectOverview = () => {
               </Col>
             </Row>
 
-            {/* Open Task */}
             <Card>
               <Text strong>16 / 25 Open Tasks</Text>
               <Progress percent={60} showInfo={false} strokeColor="#fa8c16" />
             </Card>
 
-            {/* Days Left */}
             <Card>
               <Text strong>25 / 25 Days Left</Text>
               <Progress percent={100} showInfo={false} strokeColor="#22c55e" />
             </Card>
-            <Card
-              style={{ height: 380, textAlign: "center", background: "#fff" }}
-            >
+
+            <Card style={{ minHeight: 360 }}>
               <ProjectAnalyticsChart />
             </Card>
           </Space>

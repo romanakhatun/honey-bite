@@ -88,7 +88,7 @@ const DashboardLeads = () => {
 
   return (
     <Row gutter={[24, 24]} align="stretch">
-      <Col xs={24} lg={10} style={{ display: "flex" }}>
+      <Col xs={24} xl={10} style={{ display: "flex" }}>
         <Card
           title="Leads Overview"
           extra={<MoreOutlined />}
@@ -104,13 +104,13 @@ const DashboardLeads = () => {
             body: { flex: 1, display: "flex", flexDirection: "column" },
           }}
         >
-          <div style={{ height: 320 }}>
+          <div style={{ height: 260 }}>
             <ResponsiveContainer>
               <PieChart>
                 <Pie
                   data={pieData}
-                  innerRadius={80}
-                  outerRadius={120}
+                  innerRadius={70}
+                  outerRadius={110}
                   dataKey="value"
                 >
                   {pieData.map((e, i) => (
@@ -121,9 +121,9 @@ const DashboardLeads = () => {
             </ResponsiveContainer>
           </div>
 
-          <Row gutter={[10, 10]} style={{ marginTop: "auto" }}>
+          <Row gutter={[10, 10]} style={{ marginTop: 20 }}>
             {pieData.map((item) => (
-              <Col span={8} key={item.name}>
+              <Col xs={12} sm={8} key={item.name}>
                 <div
                   style={{
                     border: "1px dashed #e5e7eb",
@@ -150,7 +150,7 @@ const DashboardLeads = () => {
         </Card>
       </Col>
 
-      <Col xs={24} lg={14} style={{ display: "flex" }}>
+      <Col xs={24} xl={14} style={{ display: "flex" }}>
         <Card
           title="Latest Leads"
           extra={<MoreOutlined />}
@@ -169,6 +169,7 @@ const DashboardLeads = () => {
             dataSource={leads}
             pagination={{ pageSize: 5 }}
             rowKey="key"
+            scroll={{ x: 700 }}
           />
         </Card>
       </Col>

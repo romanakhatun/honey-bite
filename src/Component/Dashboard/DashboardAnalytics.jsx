@@ -55,7 +55,7 @@ const products = [
 const DashboardAnalytics = () => {
   return (
     <Row gutter={[24, 24]} align="stretch">
-      <Col xs={24} lg={16} style={{ display: "flex" }}>
+      <Col xs={24} xl={16} style={{ display: "flex" }}>
         <Card
           title="Payment Record"
           style={{
@@ -70,11 +70,10 @@ const DashboardAnalytics = () => {
             body: { flex: 1, display: "flex", flexDirection: "column" },
           }}
         >
-          <ResponsiveContainer width="100%" height={340}>
+          <ResponsiveContainer width="100%" height={260}>
             <ComposedChart data={data}>
               <XAxis dataKey="month" />
               <Tooltip />
-
               <Bar
                 dataKey="bg"
                 fill="#e5e7eb"
@@ -96,14 +95,14 @@ const DashboardAnalytics = () => {
             </ComposedChart>
           </ResponsiveContainer>
 
-          <Row gutter={16} style={{ marginTop: 26 }}>
+          <Row gutter={[16, 16]} style={{ marginTop: 26 }}>
             {[
               { label: "Awaiting", val: "$5,486", color: "#3456db" },
               { label: "Completed", val: "$9,275", color: "#16a34a" },
               { label: "Rejected", val: "$3,868", color: "#ef4444" },
               { label: "Revenue", val: "$50,668", color: "#111827" },
             ].map((s) => (
-              <Col span={6} key={s.label}>
+              <Col xs={24} sm={12} md={12} xl={6} key={s.label}>
                 <div
                   style={{
                     border: "1px dashed #e5e7eb",
@@ -132,7 +131,7 @@ const DashboardAnalytics = () => {
         </Card>
       </Col>
 
-      <Col xs={24} lg={8} style={{ display: "flex" }}>
+      <Col xs={24} xl={8} style={{ display: "flex" }}>
         <Card
           style={{
             borderRadius: 16,
@@ -152,7 +151,7 @@ const DashboardAnalytics = () => {
             },
           }}
         >
-          <div style={{ background: "#3456db", padding: 22, color: "#fff" }}>
+          <div style={{ background: "#3456db", padding: 18, color: "#fff" }}>
             <h2 style={{ margin: 0 }}>30,569</h2>
             <div>Total Sales</div>
           </div>
@@ -163,15 +162,16 @@ const DashboardAnalytics = () => {
                 key={i}
                 style={{
                   display: "flex",
-                  alignItems: "center",
+                  gap: 12,
+                  padding: "14px 18px",
+                  flexWrap: "wrap",
                   justifyContent: "space-between",
-                  padding: "16px 22px",
                   borderBottom:
                     i !== products.length - 1 ? "1px dashed #e5e7eb" : "none",
                 }}
               >
-                <div style={{ display: "flex", gap: 14 }}>
-                  <Image src={item.icon} alt="icon" width={48} height={48} />
+                <div style={{ display: "flex", gap: 12 }}>
+                  <Image src={item.icon} alt="icon" width={42} height={42} />
                   <div>
                     <div style={{ fontWeight: 600 }}>{item.name}</div>
                     <div style={{ fontSize: 13, color: "#6b7280" }}>
@@ -192,7 +192,7 @@ const DashboardAnalytics = () => {
             style={{
               marginTop: "auto",
               textAlign: "center",
-              padding: 20,
+              padding: 18,
               fontWeight: 600,
               cursor: "pointer",
               borderTop: "1px solid #eee",

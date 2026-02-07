@@ -109,7 +109,7 @@ export default function ProjectsTable() {
 
   return (
     <div style={{ background: "#fff", padding: 20, borderRadius: 12 }}>
-      <Space
+      {/* <Space
         style={{
           marginBottom: 16,
           display: "flex",
@@ -137,6 +137,43 @@ export default function ProjectsTable() {
         <Search
           placeholder="Search..."
           style={{ width: 250 }}
+          onSearch={handleSearch}
+        />
+      </Space> */}
+
+      <Space
+        wrap
+        style={{
+          marginBottom: 16,
+          display: "flex",
+          justifyContent: "space-between",
+          width: "100%",
+          gap: 12,
+        }}
+      >
+        <Space wrap>
+          Show
+          <Select
+            value={pageSize}
+            style={{ width: 80 }}
+            onChange={(v) => {
+              setPageSize(v);
+              setCurrent(1);
+            }}
+          >
+            {[10, 20, 30, 40, 50].map((n) => (
+              <Option key={n}>{n}</Option>
+            ))}
+          </Select>
+          entries
+        </Space>
+
+        <Search
+          placeholder="Search..."
+          style={{
+            width: "100%",
+            maxWidth: 250,
+          }}
           onSearch={handleSearch}
         />
       </Space>
